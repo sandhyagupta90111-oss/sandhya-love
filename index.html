@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandhya ❤️ Rishu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#dff4ff,#cbe8ff,#eaf8ff);
+overflow-x:hidden;
+color:#123456;
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+h1,h2{
+margin-bottom:20px;
+}
+
+.card{
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+max-width:900px;
+margin:auto;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.password-screen{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#cdeaff,#eefaff);
+z-index:99999;
+}
+
+.login-box{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+width:320px;
+}
+
+.login-box h2{
+margin-bottom:15px;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+margin:15px 0;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:#6ab9ff;
+color:white;
+font-weight:600;
+}
+
+.hidden{
+display:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.hero h1{
+font-size:4rem;
+font-family:'Dancing Script',cursive;
+}
+
+.hero p{
+font-size:1.3rem;
+max-width:800px;
+}
+
+.typing{
+font-size:1.5rem;
+margin-top:20px;
+color:#ff4d7a;
+font-weight:600;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.timeline{
+max-width:800px;
+margin:auto;
+text-align:left;
+}
+
+.timeline div{
+margin:20px 0;
+padding:20px;
+background:white;
+border-radius:15px;
+}
+
+.counter{
+font-size:2rem;
+font-weight:bold;
+color:#ff4d7a;
+}
+
+.letter{
+display:none;
+margin-top:20px;
+line-height:1.8;
+}
+
+.reason{
+background:white;
+padding:20px;
+border-radius:15px;
+margin:10px;
+display:inline-block;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:floatUp 8s linear forwards;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+.star{
+position:fixed;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+50%{opacity:.2}
+}
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+footer{
+padding:40px;
+}
+
+.music{
+margin-top:20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="password-screen" id="login">
+<div class="login-box">
+<h2>❤️ Private Love Website ❤️</h2>
+<p>Enter Password</p>
+<input type="password" id="pass">
+<button onclick="unlock()">Enter</button>
+</div>
+</div>
+
+<div id="site" class="hidden">
+
+<section class="hero">
+
+<h1>Sandhya ❤️ Rishu</h1>
+
+<p>
+Every love story is beautiful,
+but ours is my favorite.
+</p>
+
+<div class="typing" id="typing"></div>
+
+<div class="music">
+<audio controls>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ov0YGGSY6gY?si=p_PUlPDX4P7nZeMR&amp;start=16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></audio>
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+<h2>💌 A Message For You</h2>
+
+<p>
+Hi Jaanu ❤️<br><br>
+
+I love you more than words can describe.
+
+Thank you for being my happiness,
+my comfort,
+my best friend,
+and my favorite person.
+
+No matter how difficult life gets,
+I promise to stand beside you.
+
+You are truly special to me.
+
+Forever Yours,
+Rishu ❤️
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>⏳ Our Love Counter</h2>
+
+<div class="counter" id="relationshipDays"></div>
+
+<p>6 Beautiful Months Together ❤️</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📸 Our Beautiful Memories</h2>
+
+<br>
+
+<div class="gallery">
+
+<img src="photo1.jpg" onclick="openImg(this.src)">
+<img src="photo2.jpg" onclick="openImg(this.src)">
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>🌍 Distance Doesn't Matter</h2>
+
+<p>
+
+Ghaziabad ❤️ Bhabhan
+
+<br><br>
+
+Distance means so little when someone means so much.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>📅 Our Journey</h2>
+
+<div class="timeline">
+
+<div>❤️ We Met</div>
+<div>💞 Became Best Friends</div>
+<div>🥰 Fell In Love</div>
+<div>🌍 Long Distance</div>
+<div>✨ Forever Together</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>⏳ Countdown Until We Meet</h2>
+
+<div class="counter" id="countdown"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>💌 Secret Love Letters</h2>
+
+<button onclick="toggleLetter('l1')">Letter #1</button>
+<button onclick="toggleLetter('l2')">Letter #2</button>
+<button onclick="toggleLetter('l3')">Letter #3</button>
+
+<div class="letter" id="l1">
+My Dearest Jaanu ❤️,
+Every day with you feels like a blessing.
+You make my life brighter.
+</div>
+
+<div class="letter" id="l2">
+No matter how far apart we are,
+you are always in my thoughts and heart.
+</div>
+
+<div class="letter" id="l3">
+If I had to choose again,
+I would still choose you.
+Every single time.
+❤️
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>❤️ Reasons I Love You</h2>
+
+<div class="reason">Your Smile 😊</div>
+<div class="reason">Your Kind Heart ❤️</div>
+<div class="reason">You Understand Me 🤗</div>
+<div class="reason">You Support Me 🌸</div>
+<div class="reason">You Make Me Happy ✨</div>
+<div class="reason">Your Cuteness 😍</div>
+<div class="reason">Your Loyalty ❤️</div>
+<div class="reason">Everything About You 💕</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>🌙 Future Dreams</h2>
+
+<p>
+
+🏠 Our Home<br>
+✈️ Our Trips<br>
+☕ Morning Tea Together<br>
+🎂 Celebrating Birthdays<br>
+❤️ Growing Old Together
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Sandhya ❤️ Rishu</h2>
+
+<p>
+Forever & Always ❤️
+</p>
+
+</footer>
+
+</div>
+
+<div class="modal" id="modal" onclick="closeImg()">
+<img id="modalImg">
+</div>
+
+<script>
+
+function unlock(){
+
+let p=document.getElementById("pass").value;
+
+if(p==="iloveyou"){
+
+document.getElementById("login").style.display="none";
+document.getElementById("site").classList.remove("hidden");
+
+}else{
+alert("Wrong Password ❤️");
+}
+
+}
+
+const txt=[
+"I Love You ❤️",
+"You Are My Favorite Person 🌸",
+"Forever Yours ❤️",
+"Distance Can't Change My Love 🌍"
+];
+
+let i=0;
+
+setInterval(()=>{
+document.getElementById("typing").innerHTML=txt[i];
+i=(i+1)%txt.length;
+},2500);
+
+function toggleLetter(id){
+
+let x=document.getElementById(id);
+
+x.style.display=
+x.style.display==="block"
+? "none"
+: "block";
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(createHeart,300);
+
+for(let i=0;i<80;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(s);
+
+}
+
+function openImg(src){
+
+document.getElementById("modal").style.display="flex";
+document.getElementById("modalImg").src=src;
+
+}
+
+function closeImg(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+const relationshipStart=new Date();
+relationshipStart.setMonth(relationshipStart.getMonth()-6);
+
+function updateRelationship(){
+
+const now=new Date();
+
+const diff=now-relationshipStart;
+
+const days=Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("relationshipDays").innerHTML=
+days+" Days Together ❤️";
+
+}
+
+updateRelationship();
+
+const meetDate=new Date();
+meetDate.setMonth(meetDate.getMonth()+3);
+
+function updateCountdown(){
+
+const now=new Date();
+
+const diff=10-sep-2026-now;
+
+const d=Math.floor(diff/(1000*60*60*24));
+const h=Math.floor((diff/(1000*60*60))%24);
+const m=Math.floor((diff/(1000*60))%60);
+const s=Math.floor((diff/1000)%60);
+
+document.getElementById("countdown").innerHTML=
+`${d} Days ${h} Hours ${m} Minutes ${s} Seconds`;
+
+}
+
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+</script>
+
+</body>
+</html>
